@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+.kanban-board {
+  @apply w-full h-screen bg-emerald-500 flex space-x-4 p-4 overflow-x-auto;
+}
+
+.kanban-board-column {
+  @apply bg-white rounded-lg shadow-md flex flex-col w-64;
+}
+
+.kanban-board-column-header {
+  @apply text-xl font-bold mb-4 ;
+}
+
+.kanban-board-column-content {
+  @apply flex-1 p-4 space-y-4 overflow-y-auto;
+}
+
+.kanban-board-card {
+  @apply bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-200;
+}
