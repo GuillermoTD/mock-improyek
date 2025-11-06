@@ -1,21 +1,45 @@
 @import "tailwindcss";
 
 .kanban-board {
-  @apply w-full h-screen bg-emerald-500 flex space-x-4 p-4 overflow-x-auto;
+  @apply w-full h-screen flex flex-col space-x-4 p-4 overflow-x-auto bg-white;
+}
+
+.kanban-header {
+  @apply text-3xl font-semibold mb-4 flex
+          items-center justify-between px-[1rem];
+
+  .kanban-header-options {
+    @apply flex items-center gap-[1.1rem] justify-between text-[1.2rem];
+
+    .kanban-header-options-usersConnected {
+      @apply cursor-pointer flex items-center;
+
+      .kanban-header-options-usersConnected-bubble {
+        @apply w-8 h-8 bg-blue-400 text-white rounded-full
+              flex items-center justify-center text-sm border-2 border-white
+              -ml-2;
+      }
+    }
+  }
+}
+
+.kanban-columns {
+  @apply flex space-x-4 p-4 overflow-x-auto bg-white;
 }
 
 .kanban-board-column {
-  @apply bg-white rounded-lg shadow-md flex flex-col w-64;
+  @apply rounded-lg border-[0.08rem] border-slate-200 flex flex-col w-64
+        p-4 bg-slate-300 h-auto;
 }
 
 .kanban-board-column-header {
-  @apply text-xl font-bold mb-4 ;
+  @apply text-xl font-bold mb-4 flex items-center justify-between;
 }
 
 .kanban-board-column-content {
-  @apply flex-1 p-4 space-y-4 overflow-y-auto;
+  @apply flex-1 space-y-1 overflow-y-auto;
 }
 
 .kanban-board-card {
-  @apply bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-200;
+  @apply bg-white p-4 rounded-lg border border-slate-100 flex flex-col;
 }
